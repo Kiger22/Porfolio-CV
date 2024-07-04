@@ -1,9 +1,10 @@
 import "./header.css"
 
 export const createHeader = (logoSrc, menuItems, menuItemsII) => {
+  const main = document.querySelector("main");
   const header = document.createElement("header");
   header.className = "header";
-  document.body.appendChild(header);
+  document.body.insertBefore(header, main);
 
   // logoSrc
   const logoSection = document.createElement("div");
