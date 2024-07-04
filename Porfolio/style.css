@@ -35,7 +35,7 @@
   --kg-font-size-h1: 3.125em;
   --kg-font-size-h2: 2.1875em;
   --kg-font-size-h3: 1.5625em;
-  --kg-font-size-text: 0.85em;
+  --kg-font-size-text: 0.95em;
   --kg-font-size-link: 1.25em;
 
   /* Gap */
@@ -73,26 +73,7 @@
   font-family: var(--kg-font-family-secondary);
   font-weight: 500;
   font-style: normal;
-  font-size: large;
-  color: var(--kg-text-primary);
-}
-
-.flex-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--kg-gap-md);
-}
-
-.grid-container {
-  width: 100%;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
+  color: var(--kg-text-terciary);
 }
 
 ul,ol {
@@ -105,7 +86,7 @@ a {
 
 body {
   background-color: var(--kg-bg-primary);
-  color: var(--kg-text-primary);
+  color: var(--kg-text-terciary);
   margin: 0;
 }
 
@@ -127,6 +108,12 @@ body {
   max-width: 11450px;
   min-width: 500px;
   scroll-behavior: smooth;
-  margin: 0 auto;
+  margin:0px auto;
   text-align: center;
+}
+
+  section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
 }
