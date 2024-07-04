@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: var(--kg-bg-secondary);
-  color: var(--kg-text-roseIII);
+  background-color: var(--kg-bg-terciary) ;
+  color: var(--kg-text-primary);
   text-align: center;
   padding: 10px 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
   font-size: var(--kg-font-size-text);
-  position: fixed;
 }
 
 .footer a {
@@ -26,17 +26,17 @@
 }
 
 .footer-logo img {
-  width: 10rem;
+  width: 5rem;
 }
 
 .footer-menu{
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  gap: 15px;
 }
 
 .footer-menu a{
-  color: var(--kg-text-roseIII);
+  color: var(--kg-text-primary);
   text-decoration: none;
   }
 
@@ -49,8 +49,9 @@
   flex-direction: row;
   justify-items: center;
   align-items: center;
+  gap: 15px;
 }
 
 .social-icon {
-  width: 3rem;
+  width: 2rem;
 }
