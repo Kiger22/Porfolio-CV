@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: var(--kg-bg-terciary) ;
-  color: var(--kg-text-primary);
+  background-color: var(--kg-bg-primary) ;
   text-align: center;
   padding: 10px 0;
-  position: absolute;
   bottom: 0;
   width: 100%;
   font-size: var(--kg-font-size-text);
+  position: fixed;
 }
 
 .footer a {
@@ -36,7 +35,7 @@
 }
 
 .footer-menu a{
-  color: var(--kg-text-primary);
+  color: var(--kg-text-terciary);
   text-decoration: none;
   }
 
