@@ -1,24 +1,46 @@
-export const createExperience = (node, EXPERIENCE) => {
-  const experience = document.createElement("section");
-  experience.className = "section- experience";
-  node.appendChild(experience);
+import("./experience.css");
 
-  EXPERIENCE.forEach(({ jobTitle, company, dates, description }) => {
+const divApp = document.querySelector("#app");
+
+export const createExperienceSection = (EXPERIENCE) => {
+
+  const experience = document.createElement("section");
+  experience.className = "section-experience";
+  experience.id = "Experience"
+  divApp.appendChild(experience);
+
+  const experienceTitle = document.createElement("h1");
+  experienceTitle.textContent = "Experiencia";
+  experienceTitle.className = "experience-title";
+  experience.appendChild(experienceTitle);
+
+
+  EXPERIENCE.forEach(({ jobTitle, company, dates, description }, index) => {
+
+    const divExperience = document.createElement("div");
+    divExperience.className = `div-experience ${index % 2 === 0 ? 'left' : 'right'}`;
+    experience.appendChild(divExperience);
+
     const jobTitleElement = document.createElement("h3");
+    jobTitleElement.className = "job-title";
     jobTitleElement.textContent = jobTitle;
-    experience.appendChild(jobTitleElement);
+    divExperience.appendChild(jobTitleElement);
 
     const companyElement = document.createElement("h4");
+    companyElement.className = "company";
     companyElement.textContent = company;
-    experience.appendChild(companyElement);
-
-    const datesElement = document.createElement("p");
-    datesElement.textContent = dates;
-    experience.appendChild(datesElement);
+    divExperience.appendChild(companyElement);
 
     const descriptionElement = document.createElement("p");
+    descriptionElement.className = "description";
     descriptionElement.textContent = description;
-    experience.appendChild(descriptionElement);
+    divExperience.appendChild(descriptionElement);
+
+    const datesElement = document.createElement("p");
+    datesElement.className = "dates";
+    datesElement.textContent = dates;
+    divExperience.appendChild(datesElement);
+
   });
 
 }
