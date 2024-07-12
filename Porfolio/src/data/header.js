@@ -1,7 +1,7 @@
 export const menuItemsHeaderI = [
-  { text: "Home", href: '#' },
-  { text: "Experience", href: '#' },
-  { text: "Education", href: '#' },
+  { text: "About Me", href: '#' },
+  { text: "Experience", href: '#Experience' },
+  { text: "Education", href: '#Education' },
   { text: "Skills", href: '#' },
   { text: "Contact", href: '#' },
 ];
@@ -10,4 +10,4 @@ export const menuItemsHeaderII = [
 
 ];
 
-export const heaterLogo = "./public/assets/Logo.png"
+export const heaterLogo = "./assets/Logo.png"
