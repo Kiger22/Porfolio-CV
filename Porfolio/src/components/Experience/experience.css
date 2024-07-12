@@ -1,0 +1,126 @@
+.section-experience{
+  margin: auto;
+  max-width: 900px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  width: 100%;
+  padding: 20px ;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: var(--kg-font-size-h1);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1:hover {
+	background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, var(--kg-text-terciary),transparent, transparent);
+  background-clip: text;
+  background-clip: text;
+  color: var(--kg-text-secondary);
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+
+.div-experience{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background-color: var(--kg-color-white);
+}
+
+.div-experience.left {
+  left: 0;
+  align-items: end;
+  text-align: end;
+  margin-left: -20px;
+  border-right: var(--kg-text-secondary) 10px double;
+  border-top-left-radius: var(--kg-radius-md);
+  border-bottom-right-radius: var(--kg-radius-md);
+}
+
+.div-experience.right {
+  left: 50%;
+  align-items: start;
+  text-align: start;
+  margin-left: 20px;
+  border-left: var(--kg-text-secondary) 10px double;
+  border-top-left-radius: var(--kg-radius-md);
+  border-bottom-right-radius: var(--kg-radius-md);
+}
+   
+.dates {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--kg-text-secondary);
+  padding: 8px 16px;
+}
+  
+.div-experience.left .dates {
+  right: -250px;
+}
+
+.div-experience.right .dates {
+  left: -250px;
+}
+  
+.job-title {
+  font-size: var(--kg-font-size-h3);
+  color: var(--kg-text-terciary);
+  margin: 0;
+}
+  
+.company {
+  font-size: var(--kg-font-size-h4);
+  color: var(--kg-text-terciary);
+  margin: 5px 0;
+}
+  
+.description {
+  font-size:var(--kg-font-size-p);
+  color: var(--kg-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+  
+  /* Linea central */
+.section-experience::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color:var(--kg-text-secondary);
+  top: 150px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+  
+  /* Circulos en la linea */
+.div-experience::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--kg-color-terciary);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+  
+.div-experience.left::before {
+  right: -40px;
+}
+
+.div-experience.right::before {
+  left: -40px;
+}
