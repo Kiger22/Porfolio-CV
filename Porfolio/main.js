@@ -1,9 +1,9 @@
+import { createAboutMeSection } from './src/components/AboutMe/aboutMe';
 import { createEducation } from './src/components/Education/education';
-import { createExperience } from './src/components/Experience/experience';
+import { createExperienceSection } from './src/components/Experience/experience';
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header'
-import { createHero } from './src/components/Hero/hero';
-import { createSkills } from './src/components/Skills/skills';
+import { createSwitchButton } from './src/components/SwitchButton/switchButton';
 import { DATA } from './src/data/data';
 import { footerLogo, menuFooter, socialLinks } from './src/data/footer';
 import { heaterLogo, menuItemsHeaderI, menuItemsHeaderII } from './src/data/header'
@@ -12,8 +12,31 @@ import './style.css'
 const divApp = document.querySelector("#app");
 
 createHeader(heaterLogo, menuItemsHeaderI, menuItemsHeaderII);
-createHero(divApp, DATA.title);
-createSkills(divApp, DATA.skills);
+
+createAboutMeSection();
+createExperienceSection(DATA.experience);
 createEducation(divApp, DATA.education);
-createExperience(divApp, DATA.experience);
+createSwitchButton(divApp);
+
 createFooter(footerLogo, menuFooter, socialLinks);
+
+const switchButton = document.querySelector("#switch")
+
+/* switchButton.addEventListener("click", () => {
+  switchButton.classList.toggle("switched");
+
+}) */;
+
+switchButton.addEventListener("click", () => {
+
+  const fullpage = document.querySelector("body");
+  const switchButton = document.querySelector("#switch");
+
+  if (fullpage.classList.contains("dark")) {
+    fullpage.classList.remove("dark");
+    switchButton.classList.remove("switched");
+  } else {
+    fullpage.classList.add("dark");
+    switchButton.classList.add("switched");
+  }
+});
