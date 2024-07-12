@@ -17,12 +17,19 @@
   margin: 30px 50px;
 }
 
+.header-logo:hover {
+  transform:scale(1.2);
+  transition: 1s;
+  rotate:initial;
+  cursor: pointer;
+}
+
 .header-menu, 
 .header-menu-login{
   display: flex;
-  gap: 40px;
+  gap: 20px;
   font-size: var(--kg-font-size-text);
-  margin-right: 250px;
+  margin-right: 50px;
 }
 
 .header-menu a,
@@ -34,18 +41,8 @@
 
 .header-menu a:hover,
 .header-menu-login a:hover {
-  box-shadow: var(--kg-text-secondary);
   transform: scale(1.1);
+  transition: 0.5s;
+  text-shadow: 0 0 30px var(--kg-text-primary);
 }
 
-.header-search {
-  width: 60%;
-  align-items: center;
-  padding: 0 60px;
-}
-
-.header-login{
-  display: flex;
-  padding: 0 40px;
-  gap: 20px;
-}
