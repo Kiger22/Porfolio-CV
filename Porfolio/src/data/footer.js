@@ -1,4 +1,4 @@
-export const footerLogo = "./public/assets/LogoSolo.png"
+export const footerLogo = "./assets/LogoSolo.png"
 
 export const menuFooter = [
   { text: 'Inicio', href: '#' },
@@ -8,7 +8,7 @@ export const menuFooter = [
 ];
 
 export const socialLinks = [
-  { href: 'https://facebook.com', src: "./public/assets/facebook.png" },
-  { href: 'https://twitter.com', src: "./public/assets/twitter.png" },
-  { href: 'https://instagram.com', src: "./public/assets/instagram.png" }
+  { href: 'https://facebook.com', src: "./assets/facebook.png" },
+  { href: 'https://twitter.com', src: "./assets/twitter.png" },
+  { href: 'https://instagram.com', src: "./assets/Instagram.png" }
 ];
