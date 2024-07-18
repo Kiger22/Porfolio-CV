@@ -1,4 +1,6 @@
+import { openModal } from "../../../actions/openModal";
 import { DATA } from "../../data/data";
+import { createButton } from "../Button/button";
 
 import("./aboutMe.css");
 
@@ -36,24 +38,21 @@ export const createAboutMeSection = () => {
   addressParagraph.textContent = DATA.aboutMe.address;
   divContent.appendChild(addressParagraph);
 
-  const contactLink = document.createElement("a");
-  contactLink.href = `email:${DATA.aboutMe.email}`;
-  contactLink.textContent = "Contact me";
-  divContent.appendChild(contactLink);
+  const curriculumLink = document.createElement("a");
+  curriculumLink.href = DATA.aboutMe.cv;
+  curriculumLink.textContent = "Curriculum Vitae";
+  divContent.appendChild(curriculumLink);
 
-  const skillsList = document.createElement("ul");
-  DATA.skills.forEach(skill => {
-    const skillItem = document.createElement("li");
-    const skillImg = document.createElement("img");
-    skillImg.src = skill;
-    skillItem.appendChild(skillImg);
-    skillsList.appendChild(skillItem);
+  const NetworksList = document.createElement("ul");
+  DATA.networks.forEach(Network => {
+    const NetworkItem = document.createElement("li");
+    const NetworkImg = document.createElement("img");
+    NetworkImg.src = Network;
+    NetworkItem.appendChild(NetworkImg);
+    NetworksList.appendChild(NetworkItem);
   });
-  section.appendChild(skillsList);
+  divContent.appendChild(NetworksList);
 
-};
+  createButton(divContent, "ABOUT ME", openModal);
 
-export const addAboutListeners = () => {
-  const avatar = document.querySelector(".avatar");
-  avatar.addEventListener("click", (e) => e.target.classList.toggle("rotate"));
 };
