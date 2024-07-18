@@ -5,8 +5,15 @@ export const DATA = {
     name: "Guillermo Mendoza",
     aboutMe: "Desarrollador web",
     address: "L'Ampolla, Tarragona (España)",
-    email: "kiger22@hotmail.com",
+    cv: "./assets/Curriculum Vitae.pdf",
   },
+
+  networks: [
+    "./assets/facebook.png",
+    "./assets/Instagram.png",
+    "./assets/twitter.png",
+    "./assets/pinterest.png"
+  ],
 
   experience: [
     {
@@ -81,14 +88,33 @@ export const DATA = {
   ],
 
   skills: [
-    "./assets/HTMLLogo.png",
-    "./assets/CSS3Logo.png",
-    "./assets/javascriptLogo.png",
-    "./assets/ViteLogo.png",
-    "./assets/GitHubLogo.png",
-    "./assets/JavaLogo.png",
-    "./assets/ReactLogo.png",
-    "./assets/PythonLogo.png"
-  ]
-};
+    { name: "HTML5", src: "./assets/HTMLLogo.png", level: 90 },
+    { name: "CSS3", src: "./assets/CSS3Logo.png", level: 80 },
+    { name: "JavaScript", src: "./assets/javascriptLogo.png", level: 70 },
+    { name: "Vite", src: "./assets/ViteLogo.png", level: 60 },
+    { name: "JAVA", src: "./assets/JavaLogo.png", level: 50 },
+    { name: "REACT", src: "./assets/ReactLogo.png", level: 50 },
+    { name: "Python", src: "./assets/PythonLogo.png", level: 50 }
+  ],
 
+  projects: [
+    {
+      title: "Landing Page",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus at, impedit quos quia explicabo quam animi ducimus qui accusamus eos? Fuga, reprehenderit vitae? Deserunt mollitia consequatur est eius quo",
+      link: "https://landing-page-practica.netlify.app/",
+      preview: "./assets/Landing-Page.png",
+    },
+    {
+      title: "La Chiviteria",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus at, impedit quos quia explicabo quam animi ducimus qui accusamus eos? Fuga, reprehenderit vitae? Deserunt mollitia consequatur est eius quo",
+      link: "https://lachiviteria.netlify.app",
+      preview: "./assets/La-Chiviteria.png",
+    },
+    {
+      title: "Pic KGR",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus at, impedit quos quia explicabo quam animi ducimus qui accusamus eos? Fuga, reprehenderit vitae? Deserunt mollitia consequatur est eius quo",
+      link: "https://pickgr.netlify.app",
+      preview: "./assets/Pic-KGR.png",
+    }
+  ]
+}
