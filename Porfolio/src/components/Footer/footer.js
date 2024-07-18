@@ -15,16 +15,25 @@ export const createFooter = (logoSrc, menuItems, socialLinks) => {
   logoImg.src = logoSrc;
   logoSection.appendChild(logoImg);
 
+
   // menuItems
-  const menuSection = document.createElement("div");
-  menuSection.className = "footer-menu";
-  menuItems.forEach(item => {
-    const link = document.createElement("a");
-    link.href = item.href;
-    link.innerText = item.text;
-    menuSection.appendChild(link);
-  });
-  footer.appendChild(menuSection);
+  if (!menuItems) {
+    const menuSection = document.createElement("div");
+    menuSection.className = "footer-menu";
+    menuItems.forEach(item => {
+      const link = document.createElement("a");
+      link.href = item.href;
+      link.innerText = item.text;
+      menuSection.appendChild(link);
+    });
+    footer.appendChild(menuSection);
+  }
+
+  // copyright
+  const copyright = document.createElement("p");
+  copyright.className = "copyright";
+  copyright.textContent = "Created by ©kiger22"
+  footer.appendChild(copyright);
 
   // socialLinks
   const socialSection = document.createElement("div");
@@ -32,7 +41,6 @@ export const createFooter = (logoSrc, menuItems, socialLinks) => {
   socialLinks.forEach(link => {
     const a = document.createElement("a");
     a.href = link.href;
-    a.target = '_blank';
     const icon = document.createElement("img");
     icon.className = "social-icon";
     icon.src = link.src;
