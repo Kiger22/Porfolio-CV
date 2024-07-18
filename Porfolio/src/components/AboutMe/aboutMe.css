@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   gap: 5rem;
   height: 80svh;
 }
@@ -11,14 +10,14 @@
 .div-avatar{
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 5rem;
 }
 
 .div-avatar > img {
-  width: 25rem;
-  height: 25rem;
+  margin-top: 3rem;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
   cursor: pointer;
   border-radius: var(--kg-radius-mg);
@@ -28,13 +27,13 @@
 display: flex;
 flex-direction: column;
 align-items: start;
-gap: 8px;
+text-align: start;
+gap: 5px;
 }
-
 
 .div-content > h1 {
   font-size: var(--kg-font-size-h1);
-  text-align: center;
+  text-align: start;
   margin-bottom: 15px;
 }
 
@@ -46,40 +45,12 @@ gap: 8px;
   animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
   animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
 
-	}
-
-	@-webkit-keyframes reveal {
-		80% {
-			letter-spacing: 8px;
-		}
-		100% {
-			background-size: 300% 300%;
-		}
-	}
-	@keyframes reveal {
-		80% {
-			letter-spacing: 8px;
-		}
-		100% {
-			background-size: 300% 300%;
-		}
-	}
-	@-webkit-keyframes glow {
-		40% {
-			text-shadow: 0 0 8px #fff;
-		}
-	}
-	@keyframes glow {
-		40% {
-			text-shadow: 0 0 8px #fff;
-		}
-	}
+}
 
 .div-content > h3 {
   font-size: var(--kg-font-size-h3);
   text-align: center;
 }
-
 
 .div-content > p {
   font-size: var(--kg-font-size-p);
@@ -92,22 +63,25 @@ transition: 1s;
 color: var(--kg-text-secondary);
 }
 
-
-.about-me > ul {
+.div-content > ul {
+  margin-top: 1rem;
   display: flex;
-  gap: 4rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 1rem;
+ justify-content: center;
 }
 
-.about-me > ul > li > img {
-width:2.5rem;
+.div-content > ul > li > img {
+width:2rem;
 height: auto;
 }
 
-.about-me > ul > li > img:hover {
-	transform: scale(1.5);
+.div-content > ul > li > img:hover {
+	transform: scale(1.2);
 	transition: 1.5s;
+}
+
+.div-content > button {
+  margin-top: 15px;
 }
 
 .about-me a{
@@ -120,6 +94,48 @@ height: auto;
 	animation: pulsate-fwd 1.5s ease-in-out infinite both;
 }
 
+
+@media (max-width: 800px) {
+  .div-avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+} 
+
+@media (max-width: 500px) {
+
+} 
+
+
+@-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
 @keyframes pulsate-fwd {
   0% {
     transform: scale(1);
@@ -149,50 +165,3 @@ height: auto;
     transform: scale(1.2);
   }
 }
-
-
-/** Animacion mover caja con sombra
-
-.div-avatar > img{
-	transform: translateX(0);
-}
-
-.div-avatar > img:before{
-	content: '';
-	position: absolute;
-	width: 90%;
-	top: 100%;
-	left: 5%;
-	height: 10px;
-	background: radial-gradient(
-		center, ellipse,
-		rgba(0,0,0,0.30) 0%,
-		rgba(0,0,0,0) 80%);
-	transition-duration: 0.5s;
-	opacity: 0;
-}
-
-.div-avatar > img:hover{
-	transform: translateY(-5px);
-	animation: 1.5s movercaja infinite;	
-}
-
-@keyframes movercaja{
-	50%{
-		-webkit-transform: translateY(-3px);
-	}
-}
-
-.div-avatar > img:hover:before{
-	opacity: 0.4;
-	transform: translateY(5px);
-  opacity: 1;
-	animation: 1.5s moversombra infinite;	
-}
-
-@keyframes moversombra{
-	50%{
-		opacity: 1;
-		-webkit-transform: translateY(3px);
-	}
-} */
