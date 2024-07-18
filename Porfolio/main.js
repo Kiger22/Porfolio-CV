@@ -1,12 +1,17 @@
+import { toggletheme } from './actions/toggleTheme';
 import { createAboutMeSection } from './src/components/AboutMe/aboutMe';
+import { crearContactSection } from './src/components/Contact/contact';
 import { createEducation } from './src/components/Education/education';
 import { createExperienceSection } from './src/components/Experience/experience';
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header'
+import { createMenuToggle, menuToggle } from './src/components/MenuToggle/menuToggle';
+import { createProjectSection } from './src/components/Projects/projects';
+import { createSkillsSection } from './src/components/Skills/skills';
 import { createSwitchButton } from './src/components/SwitchButton/switchButton';
 import { DATA } from './src/data/data';
 import { footerLogo, menuFooter, socialLinks } from './src/data/footer';
-import { heaterLogo, menuItemsHeaderI, menuItemsHeaderII } from './src/data/header'
+import { heaterLogo, meniItemsMenuToggle, menuItemsHeaderI, menuItemsHeaderII } from './src/data/header'
 import './style.css'
 
 const divApp = document.querySelector("#app");
@@ -14,29 +19,22 @@ const divApp = document.querySelector("#app");
 createHeader(heaterLogo, menuItemsHeaderI, menuItemsHeaderII);
 
 createAboutMeSection();
-createExperienceSection(DATA.experience);
+createSkillsSection(divApp, DATA.skills);
 createEducation(divApp, DATA.education);
-createSwitchButton(divApp);
-
+createExperienceSection(divApp, DATA.experience);
+createProjectSection(divApp, DATA.projects);
+crearContactSection(divApp);
 createFooter(footerLogo, menuFooter, socialLinks);
 
+createSwitchButton(divApp);
+createMenuToggle(divApp, meniItemsMenuToggle);
+
+
+
 const switchButton = document.querySelector("#switch")
-
-/* switchButton.addEventListener("click", () => {
-  switchButton.classList.toggle("switched");
-
-}) */;
-
-switchButton.addEventListener("click", () => {
-
-  const fullpage = document.querySelector("body");
-  const switchButton = document.querySelector("#switch");
-
-  if (fullpage.classList.contains("dark")) {
-    fullpage.classList.remove("dark");
-    switchButton.classList.remove("switched");
-  } else {
-    fullpage.classList.add("dark");
-    switchButton.classList.add("switched");
-  }
-});
+const fullpage = document.querySelector("body");
+const footer = document.querySelector("footer");
+const header = document.querySelector("header");
+switchButton.addEventListener("click", () => toggletheme(fullpage));
+switchButton.addEventListener("click", () => toggletheme(footer));
+switchButton.addEventListener("click", () => toggletheme(header));
