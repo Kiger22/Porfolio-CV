@@ -1,13 +1,11 @@
 import("./experience.css");
 
-const divApp = document.querySelector("#app");
-
-export const createExperienceSection = (EXPERIENCE) => {
+export const createExperienceSection = (node, EXPERIENCE) => {
 
   const experience = document.createElement("section");
   experience.className = "section-experience";
   experience.id = "Experience"
-  divApp.appendChild(experience);
+  node.appendChild(experience);
 
   const experienceTitle = document.createElement("h1");
   experienceTitle.textContent = "Experiencia";
