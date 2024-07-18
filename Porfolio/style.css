@@ -94,8 +94,30 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--kg-bg-primary);
-  color: var(--kg-text-terciary);
-  margin: 0;
+  margin: auto;
+}
+
+h1 {
+  font-size: var(--kg-font-size-h1);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1:hover {
+	background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, var(--kg-text-terciary),transparent, transparent);
+  background-clip: text;
+  background-clip: text;
+  color: var(--kg-text-secondary);
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+}
+
+h3 {
+  font-size: var(--kg-font-size-h3);
+}
+
+p {
+  font-size: var(--kg-font-size-p);
 }
 
 .dark {
@@ -103,26 +125,45 @@ body {
   color: var(--kg-text-primary);
 }
 
-.active {
-  background-color: var(--kg-bg-secondary);
-  color: var(--kg-text-dark);
-}
-
 #app {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 11450px;
-  min-width: 500px;
+  max-width: 900px;
+  min-width: 400px;
   scroll-behavior: smooth;
-  margin: 100px auto;
-  margin-left: 100px;
+  margin: 2rem auto;
+  padding-left: 80px;
   text-align: center;
 }
-
   section {
-    margin-bottom: 20px;
-    padding: 15px;
+    margin-bottom: 40px;
+ }
+
+ @-webkit-keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@keyframes reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+@-webkit-keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
 }
