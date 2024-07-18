@@ -1,20 +1,27 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center ;
   background-color: var(--kg-bg-primary) ;
+  color: var(--kg-text-terciary);
   text-align: center;
-  padding: 10px 0;
+  padding: 10px 60px;
   bottom: 0;
   width: 100%;
   font-size: var(--kg-font-size-text);
   position: fixed;
 }
 
+.dark {
+  background-color: var(--kg-bg-terciary);
+  color: var(--kg-text-primary);
+}
+
 .footer a {
-  color: var(--kg-text-dark);
   text-decoration: none;
   margin: 0 10px;
+  color: var(--kg-text-secondary);
 }
 
 .footer-logo,
@@ -35,7 +42,6 @@
 }
 
 .footer-menu a{
-  color: var(--kg-text-terciary);
   text-decoration: none;
   }
 
@@ -54,3 +60,7 @@
 .social-icon {
   width: 2rem;
 }
+
+
+
+
