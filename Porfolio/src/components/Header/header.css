@@ -13,7 +13,7 @@
 }
 
 .header-logo img {
-  width: 8rem;
+  width: 5rem;
   margin: 30px 50px;
 }
 
@@ -34,7 +34,7 @@
 
 .header-menu a,
 .header-menu-login a {
-  color: var(--kg-text-terciary);
+  color: var(--kg-text-secondary);
   text-decoration: none;
   cursor: pointer;
 }
@@ -44,5 +44,10 @@
   transform: scale(1.1);
   transition: 0.5s;
   text-shadow: 0 0 30px var(--kg-text-primary);
+}
+
+.dark {
+  background-color: var(--kg-bg-terciary);
+  color: var(--kg-text-primary);
 }
 
