@@ -1,10 +1,11 @@
 import { toggletheme } from './actions/toggleTheme';
-import { createAboutMeSection } from './src/components/AboutMe/aboutMe';
+
 import { crearContactSection } from './src/components/Contact/contact';
 import { createEducation } from './src/components/Education/education';
 import { createExperienceSection } from './src/components/Experience/experience';
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header'
+import { createHeroSection } from './src/components/Hero/hero';
 import { createMenuToggle, menuToggle } from './src/components/MenuToggle/menuToggle';
 import { createProjectSection } from './src/components/Projects/projects';
 import { createSkillsSection } from './src/components/Skills/skills';
@@ -18,7 +19,7 @@ const divApp = document.querySelector("#app");
 
 createHeader(heaterLogo, menuItemsHeaderI, menuItemsHeaderII);
 
-createAboutMeSection();
+createHeroSection(divApp, DATA.aboutMe);
 createSkillsSection(divApp, DATA.skills);
 createEducation(divApp, DATA.education);
 createExperienceSection(divApp, DATA.experience);
