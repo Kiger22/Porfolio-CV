@@ -100,19 +100,19 @@ export const DATA = {
   projects: [
     {
       title: "Landing Page",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus at, impedit quos quia explicabo quam animi ducimus qui accusamus eos? Fuga, reprehenderit vitae? Deserunt mollitia consequatur est eius quo",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "https://landing-page-practica.netlify.app/",
       preview: "./assets/Landing-Page.png",
     },
     {
       title: "La Chiviteria",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus at, impedit quos quia explicabo quam animi ducimus qui accusamus eos? Fuga, reprehenderit vitae? Deserunt mollitia consequatur est eius quo",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.  ",
       link: "https://lachiviteria.netlify.app",
       preview: "./assets/La-Chiviteria.png",
     },
     {
       title: "Pic KGR",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente repellendus at, impedit quos quia explicabo quam animi ducimus qui accusamus eos? Fuga, reprehenderit vitae? Deserunt mollitia consequatur est eius quo",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.  ",
       link: "https://pickgr.netlify.app",
       preview: "./assets/Pic-KGR.png",
     }
