@@ -1,6 +1,6 @@
 export const DATA = {
 
-  aboutMe: {
+  hero: {
     avatar: "./assets/myAvatar.png",
     name: "Guillermo Mendoza",
     aboutMe: "Desarrollador web",
