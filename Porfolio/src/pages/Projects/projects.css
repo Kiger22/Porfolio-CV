@@ -1,0 +1,135 @@
+.section-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin:70px auto;
+  width: 100%;
+  height: auto;
+}
+
+.projects-grid  > ul {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 1rem;
+}
+
+.projects-grid img {
+  width: 100%;
+}
+
+.projects-grid p {
+  text-align:justify;
+}
+
+.view {
+  width: 450px;
+  height: 250px;
+  margin: 10px;
+  border: 10px solid var(--kg-color-primary);
+  border-top-left-radius: var(--kg-radius-md);
+  border-bottom-right-radius: var(--kg-radius-md);
+  box-shadow: 0 0 10px var(--kg-color-terciary);
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background:var(--kg-color-white) no-repeat center center;
+  overflow:hidden;
+}
+
+.view .mask, .view .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow:hidden;
+  top: 0;
+  left: 0
+}
+
+.view img {
+  width: 100%;
+  height: auto;
+  object-fit:contain;
+  position: relative
+}
+
+.view h3 {
+  color: var(--kg-color-primary);
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+}
+
+.view p {
+  position: relative;
+  color:var(--kg-text-primary);
+  padding: 10px 20px 20px;
+  text-align: center;
+}
+
+.view a.info {
+  text-decoration: none;
+  padding: 10px 14px;
+  margin-bottom: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color:var(--kg-text-primary);
+  box-shadow: 0 0 1px var(--kg-text-primary);
+}
+
+.view a.info:hover {
+  box-shadow: 0 0 5px var(--kg-color-dark);
+  transform: scale(1.1);;
+  transition: 0.2s;
+}
+
+.efect img { 
+  transition: all 0.2s linear;
+  object-fit: cover;
+}
+
+.efect .mask {
+  opacity: 0;
+  background: rgb(75, 113, 160, 0.9);
+  transition: all 0.4s ease-in-out;
+}
+
+.efect h2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.efect p { 
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.efect a.info{
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.efect:hover img { 
+	transform: scale(1.1);
+} 
+
+.efect:hover .mask { 
+	opacity: 1;
+}
+
+.efect:hover h2,
+.efect:hover p,
+.efect:hover a.info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.efect:hover p {
+    transition-delay: 0.3s;
+}
+.efect:hover a.info {
+    transition-delay: 0.5s;
+}
