@@ -6,7 +6,7 @@ export const menuFooter = [
 ];
 
 export const socialLinks = [
-  { href: "#", src: "./assets/github.png", },
-  { href: "#", src: "./assets/linkedin.png" },
-  { href: "#", src: "./assets/discord.png" }
+  { href: "https://github.com/", src: "./assets/github.png", },
+  { href: "https://www.linkedin.com/", src: "./assets/linkedin.png" },
+  { href: "https://discord.com/", src: "./assets/discord.png" }
 ];
