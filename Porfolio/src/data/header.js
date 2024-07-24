@@ -1,5 +1,5 @@
 export const meniItemsMenuToggle = [
-  { href: '#', imgSrc: "./assets/About.svg", alt: 'Home', text: 'About Me' },
+  { href: '#', imgSrc: "./assets/About.svg", alt: 'About Me', text: 'About Me' },
   { href: '#Experience', imgSrc: "./assets/Experience.svg", alt: 'Experience', text: 'Experiencia' },
   { href: '#Education', imgSrc: "./assets/Education.svg", alt: 'Education', text: 'Educacion' },
   { href: '#Contact', imgSrc: "./assets/contact.svg", alt: 'Contact Me', text: 'Contacto' },
