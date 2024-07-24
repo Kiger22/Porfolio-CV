@@ -1,12 +1,8 @@
-.dark {
-  background-color: var(--kg-bg-terciary);
-  color: var(--kg-text-primary);
-}
-
 #mainnav ul {
+  display: none;
   position: fixed;
-  bottom: 90px;
-  right: 85%;
+  bottom: 150px;
+  right: 50px;
   z-index: 4;
 }
 
@@ -26,12 +22,14 @@
   visibility: hidden;
   transition: all 0.35s;
 }
+
 #mainnav li.animate {
   opacity: 0;
   animation-duration: 0.35s;
   animation-name: easeOutBounce;
   animation-fill-mode: forwards;
 }
+
 #mainnav li.animate:nth-child(1) {
   animation-delay: 0s;
 }
@@ -62,6 +60,7 @@
   bottom: 8px;
   left: 5px;
 }
+
 #mainnav span:before {
   content: '';
   width: 0px;
@@ -103,7 +102,16 @@
   }
 }
 
-.dark {
-  background-color: var(--kg-bg-terciary);
-  color: var(--kg-text-primary);
-}
+@media (max-width: 900px) {
+  #mainnav ul {
+    display: block;
+    position: fixed;
+    bottom: 100px;
+    left: 10px;
+    z-index: 4;
+  }
+} 
+
+@media (max-width: 500px) {
+
+} 
