@@ -130,31 +130,18 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  max-width: 900px;
+  max-width: 1000px;
   min-width: 400px;
   scroll-behavior: smooth;
-  margin: 2rem auto;
-  padding-left: 80px;
+  margin: 75px auto;
   text-align: center;
 }
 
-#video_background {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1000;
-  overflow: hidden;
-  opacity: 20%;
+section {
+    margin-bottom: 20px;
 }
-  section {
-    margin-bottom: 40px;
- }
 
- @-webkit-keyframes reveal {
+@-webkit-keyframes reveal {
   80% {
     letter-spacing: 8px;
   }
