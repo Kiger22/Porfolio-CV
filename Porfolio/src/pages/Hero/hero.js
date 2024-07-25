@@ -1,16 +1,18 @@
-import { OnClick } from "../../../actions/OnClick";
 import { openModal } from "../../../actions/openModal";
+import { divApp } from "../../../main";
 import { createButton } from "../../components/Button/button";
 import { DATA } from "../../data/data";
 
 import("./hero.css");
 
-export const createHeroPage = (node, ABOUTME) => {
+export const HeroPage = () => {
+
+  divApp.innerHTML = "";
 
   const section = document.createElement("section");
-  section.className = "hero";
+  section.className = "section-hero";
   section.id = "Hero"
-  node.appendChild(section);
+  divApp.appendChild(section);
 
   /*   const background = document.createElement("video");
     background.src = "./assets/fondo.mp4"
@@ -28,7 +30,7 @@ export const createHeroPage = (node, ABOUTME) => {
 
   const avatar = document.createElement("img");
   avatar.className = "avatar";
-  avatar.src = ABOUTME.avatar;
+  avatar.src = DATA.hero.avatar;
   divAvatar.appendChild(avatar);
 
   const divContent = document.createElement("div");
@@ -36,19 +38,19 @@ export const createHeroPage = (node, ABOUTME) => {
   divAvatar.appendChild(divContent);
 
   const heading = document.createElement("h1");
-  heading.textContent = ABOUTME.name;
+  heading.textContent = DATA.hero.name;
   divContent.appendChild(heading);
 
   const aboutMeParagraph = document.createElement("h3");
-  aboutMeParagraph.textContent = ABOUTME.aboutMe;
+  aboutMeParagraph.textContent = DATA.hero.aboutMe;
   divContent.appendChild(aboutMeParagraph);
 
   const addressParagraph = document.createElement("p");
-  addressParagraph.textContent = ABOUTME.address;
+  addressParagraph.textContent = DATA.hero.address;
   divContent.appendChild(addressParagraph);
 
   const curriculumLink = document.createElement("a");
-  curriculumLink.href = ABOUTME.cv;
+  curriculumLink.href = DATA.hero.cv;
   curriculumLink.textContent = "Curriculum Vitae";
   divContent.appendChild(curriculumLink);
 
@@ -62,6 +64,6 @@ export const createHeroPage = (node, ABOUTME) => {
   });
   divContent.appendChild(NetworksList);
 
-  createButton(divContent, "Mas de mi", OnClick);
+  createButton(divContent, "Mas de mi", openModal);
 
 };
