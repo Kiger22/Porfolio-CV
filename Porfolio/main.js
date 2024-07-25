@@ -3,31 +3,22 @@ import { toggletheme } from './actions/toggleTheme';
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header'
 import { createMenuToggle } from './src/components/MenuToggle/menuToggle';
-import { createSwitchButton } from './src/components/SwitchButton/switchButton';
+import { SwitchButton } from './src/components/SwitchButton/switchButton';
 import { DATA } from './src/data/data';
 import { footerLogo, menuFooter, socialLinks } from './src/data/footer';
 import { heaterLogo, meniItemsMenuToggle, menuItemsHeaderI, menuItemsHeaderII } from './src/data/header'
-import { createEducation } from './src/pages/Education/education';
-import { createExperienceSection } from './src/pages/Experience/experience';
-import { createHeroPage } from './src/pages/Hero/hero';
-import { createProjectSection } from './src/pages/Projects/projects';
-import { createSkillsSection } from './src/pages/Skills/skills';
+import { HeroPage } from './src/pages/Hero/hero';
 import './style.css'
 
-const divApp = document.querySelector("#app");
+export const divApp = document.querySelector("#app");
 
 createHeader(heaterLogo, menuItemsHeaderI, menuItemsHeaderII);
-
-// createHeroPage(divApp, DATA.hero);
-//createExperienceSection(divApp, DATA.experience);
-//createEducation(divApp, DATA.education);
-//createProjectSection(divApp, DATA.projects);
-createSkillsSection(divApp, DATA.skills);
+HeroPage();
 
 createFooter(footerLogo, menuFooter, socialLinks);
 
-createSwitchButton(divApp);
-createMenuToggle(divApp, meniItemsMenuToggle);
+SwitchButton();
+createMenuToggle(meniItemsMenuToggle);
 
 
 
