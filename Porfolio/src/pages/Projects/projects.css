@@ -10,7 +10,7 @@
 .projects-grid  > ul {
  display: flex;
  flex-wrap: wrap;
- justify-content: center;
+ justify-content: start;
  gap: 1rem;
 }
 
@@ -133,3 +133,13 @@
 .efect:hover a.info {
     transition-delay: 0.5s;
 }
+
+@media (max-width: 1000px) {
+  .projects-grid  > ul {
+    justify-content: center;
+   }
+} 
+
+@media (max-width: 500px) {
+
+} 
