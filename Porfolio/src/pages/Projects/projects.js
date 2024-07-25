@@ -1,11 +1,17 @@
+import { divApp } from "../../../main";
+import { DATA } from "../../data/data";
+import { HeroPage } from "../Hero/hero";
 import "./projects.css";
 
-export const createProjectSection = (node, PROJECTS) => {
+export const ProjectPage = () => {
+
+  divApp.innerHTML = "";
+  HeroPage();
 
   const projects = document.createElement("section");
   projects.className = "section-projects";
   projects.id = "Projects";
-  node.appendChild(projects);
+  divApp.appendChild(projects);
 
   const projectsTitle = document.createElement("h1");
   projectsTitle.textContent = "Proyectos";
@@ -17,7 +23,7 @@ export const createProjectSection = (node, PROJECTS) => {
   projects.appendChild(projectsGrid);
 
   const ul = document.createElement("ul");
-  PROJECTS.forEach((project) => {
+  DATA.projects.forEach((project) => {
     const li = document.createElement("li");
     li.className = "view efect";
 
