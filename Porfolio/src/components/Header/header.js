@@ -1,3 +1,4 @@
+import { DATA } from "../../data/data";
 import "./header.css"
 
 export const createHeader = (logoSrc, menuItems, menuItemsII) => {
@@ -23,6 +24,7 @@ export const createHeader = (logoSrc, menuItems, menuItemsII) => {
     const link = document.createElement("a");
     link.href = item.href;
     link.innerText = item.text;
+    link.addEventListener("click", item.page)
     menuSection.appendChild(link);
   });
   header.appendChild(menuSection);
