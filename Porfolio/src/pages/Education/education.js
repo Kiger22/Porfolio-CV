@@ -1,11 +1,18 @@
+import { divApp } from "../../../main";
+import { DATA } from "../../data/data";
+import { HeroPage } from "../Hero/hero";
+
 import("./education.css")
 
-export const createEducation = (node, EDUCATION) => {
+export const EducatioPage = () => {
+
+  divApp.innerHTML = "";
+  HeroPage();
 
   const education = document.createElement("section");
   education.className = "section-education";
   education.id = "Education"
-  node.appendChild(education);
+  divApp.appendChild(education);
 
   const educationTitle = document.createElement("h1");
   educationTitle.textContent = "Formacion";
@@ -16,7 +23,7 @@ export const createEducation = (node, EDUCATION) => {
   educationGrid.className = "education-grid";
   education.appendChild(educationGrid);
 
-  EDUCATION.forEach(({ degree, school, dates, description, logo }) => {
+  DATA.education.forEach(({ degree, school, dates, description, logo }) => {
 
     const educationItem = document.createElement("div");
     educationItem.className = "education-item";
