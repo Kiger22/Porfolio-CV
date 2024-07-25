@@ -1,12 +1,11 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 250px;
   align-items: center;
   background-color: var(--kg-bg-primary);
   color: var(--kg-text-terciary);
-  text-align: center;
   width: 100%;
   height: 100px;
   position: fixed;
@@ -16,6 +15,7 @@
 .header-logo img {
   width: 5rem;
   margin-top:20px;
+  margin-left: 50px;
 }
 
 .header-logo:hover {
@@ -29,7 +29,7 @@
   display: flex;
   gap: 30px;
   font-size: var(--kg-font-size-text);
-  margin-right: 50px;
+  margin-right: 5rem;
 }
 
 .header-menu a,
@@ -49,3 +49,14 @@
   color: var(--kg-text-primary);
 }
 
+@media (max-width: 900px) {
+  .header-menu, 
+  .header-menu-login{
+    display: none;
+  
+  }
+} 
+
+@media (max-width: 500px) {
+
+} 
