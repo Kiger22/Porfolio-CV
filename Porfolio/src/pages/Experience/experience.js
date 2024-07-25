@@ -1,18 +1,26 @@
+import { divApp } from "../../../main";
+import { DATA } from "../../data/data";
+import { HeroPage } from "../Hero/hero";
+
 import("./experience.css");
 
-export const createExperienceSection = (node, EXPERIENCE) => {
+
+export const ExperiencePage = () => {
+
+  divApp.innerHTML = "";
+  HeroPage();
 
   const experience = document.createElement("section");
   experience.className = "section-experience";
   experience.id = "Experience"
-  node.appendChild(experience);
+  divApp.appendChild(experience);
 
   const experienceTitle = document.createElement("h1");
   experienceTitle.textContent = "Experiencia";
   experienceTitle.className = "experience-title";
   experience.appendChild(experienceTitle);
 
-  EXPERIENCE.forEach(({ jobTitle, company, dates, description }, index) => {
+  DATA.experience.forEach(({ jobTitle, company, dates, description }, index) => {
 
     const divExperience = document.createElement("div");
     divExperience.className = `div-experience ${index % 2 === 0 ? 'left' : 'right'}`;
