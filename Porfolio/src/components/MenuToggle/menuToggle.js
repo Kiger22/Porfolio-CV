@@ -1,6 +1,6 @@
 import "./menuToggle.css";
 
-export const createMenuToggle = (node, menuItems) => {
+export const createMenuToggle = (menuItems) => {
 
   const nav = document.createElement("nav");
   nav.id = "mainnav";
@@ -13,6 +13,7 @@ export const createMenuToggle = (node, menuItems) => {
 
     const a = document.createElement("a");
     a.href = item.href;
+    a.addEventListener("click", item.page);
     li.appendChild(a);
 
     const img = document.createElement("img");
@@ -29,7 +30,7 @@ export const createMenuToggle = (node, menuItems) => {
     }
   });
   nav.appendChild(ul);
-  node.appendChild(nav);
+  document.body.appendChild(nav);
 
 }
 
