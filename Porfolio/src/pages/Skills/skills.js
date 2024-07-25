@@ -1,11 +1,18 @@
+import { divApp } from "../../../main";
+import { DATA } from "../../data/data";
+import { HeroPage } from "../Hero/hero";
+
 import("./skills.css")
 
-export const createSkillsSection = (node, SKILLS) => {
+export const SkillsPage = () => {
+
+  divApp.innerHTML = "";
+  HeroPage();
 
   const skillsSection = document.createElement("section");
   skillsSection.className = "skills-section";
   skillsSection.id = "Skills"
-  node.appendChild(skillsSection);
+  divApp.appendChild(skillsSection);
 
   const title = document.createElement("h1");
   title.textContent = "Skills";
@@ -15,7 +22,7 @@ export const createSkillsSection = (node, SKILLS) => {
   skillsElement.className = "skills";
   skillsSection.appendChild(skillsElement);
 
-  SKILLS.forEach(skill => {
+  DATA.skills.forEach(skill => {
     const skillElement = document.createElement("div");
     skillElement.className = "skill";
     skillsElement.appendChild(skillElement);
