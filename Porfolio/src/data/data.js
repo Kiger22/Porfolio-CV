@@ -1,5 +1,19 @@
 export const DATA = {
 
+  AboutMe: {
+    title: "UI/UX Designer & Web Developer",
+    image: "./assets/aboutMe.jpeg",
+    description: "Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor justo et dolor dolor dolor",
+    name: "Kate Winslet",
+    birthday: "1 April 1990",
+    degree: "Master",
+    phone: "+012 345 6789",
+    email: "info@example.com",
+    address: "123 Street, New York, USA",
+    experience: "10 Years",
+    freelance: "Available"
+  },
+
   hero: {
     avatar: "./assets/myAvatar.png",
     name: "Guillermo Mendoza",
