@@ -1,3 +1,3 @@
 export const OnClick = () => {
-  alert("Enviando");
+  alert("En proceso...");
 }
