@@ -32,7 +32,7 @@
   --kg-text-light: var(--kg-color-white);
 
   /* Font Sizes */
-  --kg-font-size-h1: 2.8em;
+  --kg-font-size-h1: 2.2em;
   --kg-font-size-h2: 1.8em;
   --kg-font-size-h3: 1.5em;
   --kg-font-size-p: 0.85em;
@@ -133,13 +133,27 @@ p {
   max-width: 1000px;
   min-width: 400px;
   scroll-behavior: smooth;
-  margin: 75px auto;
+  margin: 100px auto;
   text-align: center;
 }
 
 section {
+  padding-top: 40px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 900px) {
+  #app {
+    max-width: 600px;
+    min-width: 400px;
+    margin: 100px auto;
+    margin-right: 40px;
+  }
+} 
+
+@media (max-width: 500px) {
+
+} 
 
 @-webkit-keyframes reveal {
   80% {
