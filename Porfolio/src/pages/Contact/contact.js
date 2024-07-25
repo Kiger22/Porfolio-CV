@@ -1,13 +1,19 @@
 import("./contact.css")
-import { OnClick } from "../../../actions/OnClick";
-import { createButton } from "../Button/button";
 
-export const crearContactPage = (node) => {
+import { OnClick } from "../../../actions/OnClick";
+import { divApp } from "../../../main";
+import { createButton } from "../../components/Button/button";
+import { HeroPage } from "../Hero/hero";
+
+export const ContactPage = () => {
+
+  divApp.innerHTML = "";
+  HeroPage();
 
   const contactSection = document.createElement("section");
   contactSection.className = "section-contact";
   contactSection.id = "Contact"
-  node.appendChild(contactSection);
+  divApp.appendChild(contactSection);
 
   const contactTitle = document.createElement("h1");
   contactTitle.textContent = "Contacto";
@@ -39,6 +45,6 @@ export const crearContactPage = (node) => {
   inputMensaje.classList.add("mensaje");
   formulario.appendChild(inputMensaje);
 
-  createButton(formulario, "Enviar", OnClick);
+  createButton(formulario, "Enviar Consulta", OnClick);
 
 }
