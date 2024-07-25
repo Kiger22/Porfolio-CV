@@ -1,12 +1,13 @@
-.switch-conteiner{
+.switch-container{
   position: fixed;
-  top: 120px;
+  bottom: 100px;
   right: 100px;
   z-index: 4;
 }
 
 #switch,
 #circle {
+
   height: 30px;
   transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
   transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
