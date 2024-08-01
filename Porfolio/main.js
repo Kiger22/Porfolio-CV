@@ -1,4 +1,4 @@
-import { toggletheme } from './actions/toggleTheme';
+import { toggletheme } from "./actions/toggleTheme";
 
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header'
